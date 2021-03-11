@@ -1,37 +1,8 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/RobinHistory/RobinHistory.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RobinHistory/RobinHistory.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+# Welcome To Robin History's Page~!
+This page is used to record some important records by time, maybe.
+## 2021.03.11 Python.Mutilprocessing.Value
+  在官方文档（3.9.2）中，Value对象自带有一个锁。文档同时提及了一个关于+=，非原子性的操作，意味着+=将两次获取锁，中间如果中断的话，就会影响最终值。
+  2021.03.11.00.py 将展示一个不用额外锁的方法，维持安全，用到get_lock()的方法。
+  2021.03.11.01.py 将展示不采用get_lock，会产生的结果。
+  2021.03.11.02.py 将展示一个采用额外锁维持正确性的方法。
+  Value自带的锁虽然保护了单次的互斥要求，但是在需要进行连续操作的时候，需要注意这个锁的设置。
