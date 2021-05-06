@@ -4,13 +4,14 @@ import time
 
 def job(v, num, l):
     #新增一个锁
-    l.acquire() 
+    #l.acquire() 
     for _ in range(100):
         time.sleep(0.01)
-        #with v.get_lock(): 
+        #with v.get_lock():
+        l.acquire()  
         v.value +=num
         print(v.value)
-    l.release() 
+        l.release() 
 
 def multicore():
     l = multiprocessing.Lock() # 定义一个进程锁
